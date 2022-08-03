@@ -1,0 +1,426 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grilla {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+  grid-template-rows: 40vh 100vh 6vh;
+  grid-template-columns: 100%;
+}
+
+.contenedor {
+  grid-area: header;
+}
+
+.main {
+  grid-area: main;
+}
+
+.pie {
+  grid-area: footer;
+  border: solid 1px black;
+  border-right: 0px;
+  border-left: 0px;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(/imagenes/header.png);
+  background-repeat: no-repeat;
+}
+
+.image {
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 80px;
+  animation: from-right 2.5s ease;
+}
+
+@keyframes from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+nav,
+ul,
+li {
+  display: inline;
+  font-family: "Oswald", sans-serif;
+  list-style: none;
+  padding: 45px;
+}
+
+nav,
+ul,
+li,
+a {
+  font-size: large;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.main {
+  background-color: #308e32;
+}
+
+.imagen {
+  margin-top: 50px;
+  width: 500px;
+  order: 1;
+}
+
+.contenedormain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  margin-top: 60px;
+  color: white;
+}
+
+.h11 {
+  background: linear-gradient(
+      90deg,
+      rgb(239, 238, 238),
+      rgb(26, 187, 50),
+      rgb(12, 12, 12)
+    )
+    0 0 / 400% 100%;
+  animation: move-bg 4s infinite linear;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+@keyframes move-bg {
+  to {
+    background-position: 400% 0;
+  }
+}
+
+p {
+  margin-top: 35px;
+  font-size: 22px;
+  color: white;
+}
+
+.pie {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+/* about us */
+
+.grilla-aboutus {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main im"
+    "footer footer";
+  grid-template-rows: 40vh 100vh 6vh;
+  grid-template-columns: 60% 40%;
+}
+
+h2 {
+  padding-top: 25px;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  color: white;
+}
+
+.imm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: im;
+  background-color: #308e32;
+}
+.image2 {
+  width: 400px;
+  padding-top: 30px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.p1 {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  color: white;
+}
+
+.contenedormain-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* services */
+
+.grilla-services {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main imagen"
+    "footer footer";
+  grid-template-rows: 40vh 100vh 6vh;
+  grid-template-columns: 50% 50%;
+}
+.immg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: imagen;
+  background-color: white;
+  border: solid 0 rgb(0, 0, 0);
+}
+.imagen3 {
+  height: 70vh;
+  width: 90%;
+}
+
+.contp {
+  display: flex;
+  flex-direction: column;
+}
+
+.p2 {
+  margin-left: 10px;
+  color: white;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.contenedormain-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* location */
+
+.ubi:hover {
+  color: rgb(0, 0, 0);
+  transition: 1s;
+}
+.ubi {
+  color: rgb(253, 253, 253);
+  font-size: 40px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.imagen4 {
+  width: 600px;
+  padding-top: 15px;
+  margin-bottom: 30px;
+}
+
+.contenedormain-4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loc {
+  padding-bottom: 10px;
+}
+
+/* contact */
+.logo1 {
+  width: 65px;
+  margin-top: 30px;
+}
+.cabeza {
+  height: 40vh;
+}
+.cu2 {
+  background-color: #308e32;
+  padding-bottom: 20px;
+}
+
+.logo {
+  margin-top: 40px;
+}
+.num {
+  color: white;
+}
+.enlace {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: black;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.formulario {
+  background-color: rgb(0, 0, 0);
+  padding-top: 30px;
+  padding-left: 80px;
+  padding-bottom: 20px;
+  color: white;
+}
+.linea {
+  padding-top: 10px;
+  border: none;
+}
+.legen {
+  font-size: 30px;
+  color: white;
+}
+
+.contenedormain-5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cont {
+  padding-bottom: 10px;
+}
+
+/* index responsive */
+
+@media (max-width: 1280px) {
+  nav,
+  ul,
+  li {
+    padding: 20px;
+  }
+
+  .grilla {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+    grid-template-rows: 30% 80% 8vh;
+    grid-template-columns: 100%;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1040px) {
+  nav,
+  ul,
+  li {
+    font-size: 1px;
+    padding: 20px;
+  }
+
+  .grilla {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+    grid-template-rows: 30% 80% 8vh;
+    grid-template-columns: 100%;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  nav,
+  ul,
+  li {
+    font-size: 1px;
+    padding: 10px;
+  }
+  p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 750px) {
+  nav,
+  ul,
+  li {
+    font-size: 1px;
+    padding: 5px;
+  }
+  p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 670px) {
+  .contenedor {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(/imagenes/header.png);
+  }
+  .grilla {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+    grid-template-rows: 20% 80% 8vh;
+    grid-template-columns: 100%;
+  }
+  .image {
+    padding-right: 80px;
+  }
+  nav,
+  ul,
+  li {
+    margin-bottom: 80px;
+  }
+}
+
+/* aboutus responsive */
+
+@media (max-width: 1280px) {
+  .grilla-aboutus {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+    grid-template-rows: 40vh 80% 8vh;
+    grid-template-columns: 100%;
+  }
+  p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 620px) {
+  .image2 {
+    width: 70%;
+  }
+  .p1 {
+    font-size: 13px;
+  }
+}
